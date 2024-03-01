@@ -24,8 +24,8 @@ hs_err_pid*
 replay_pid*
 
 # Ignore
-Lab0_FizzBuzz\.vs
-Lab0_FizzBuzz\bin
-Lab0_FizzBuzz\obj
+Lab0_FizzBuzz/.vs
+Lab0_FizzBuzz/bin
+Lab0_FizzBuzz/obj
 
 
