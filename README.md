@@ -1,2 +1,2 @@
-# Net_Java
+# Net_Java Jakub Kanadys
  
