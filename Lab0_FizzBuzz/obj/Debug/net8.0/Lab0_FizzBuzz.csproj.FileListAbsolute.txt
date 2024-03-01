@@ -1,0 +1,15 @@
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\bin\Debug\net8.0\Lab0_FizzBuzz.exe
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\bin\Debug\net8.0\Lab0_FizzBuzz.deps.json
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\bin\Debug\net8.0\Lab0_FizzBuzz.runtimeconfig.json
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\bin\Debug\net8.0\Lab0_FizzBuzz.dll
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\bin\Debug\net8.0\Lab0_FizzBuzz.pdb
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.AssemblyInfoInputs.cache
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.AssemblyInfo.cs
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.sourcelink.json
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.dll
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\refint\Lab0_FizzBuzz.dll
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.pdb
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\Lab0_FizzBuzz.genruntimeconfig.cache
+C:\Users\jakub\Documents\GitHub\Net_Java\Lab0_FizzBuzz\obj\Debug\net8.0\ref\Lab0_FizzBuzz.dll
