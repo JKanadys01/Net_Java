@@ -12,7 +12,7 @@ namespace Lab0_FizzBuzz
         public FizzBuzz(int x) { upperLimit = x; }
         public void Display()
         {
-            for (int i = 0; i <= upperLimit; i++) 
+            for (int i = 1; i <= upperLimit; i++) 
             {
                 if (i % 3 == 0 && i % 5 == 0)
                     Console.WriteLine("FizzBuzz");
