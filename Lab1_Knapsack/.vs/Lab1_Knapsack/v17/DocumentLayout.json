@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|c:\\users\\jakub\\documents\\github\\net_java\\lab1_knapsack\\knapsackproblem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|solutionrelative:knapsackproblem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|c:\\users\\jakub\\documents\\github\\net_java\\lab1_knapsack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|c:\\users\\jakub\\documents\\github\\net_java\\lab1_knapsack\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7C22534-1ED8-415D-9123-70B8F4A7CD7A}|Lab1_Knapsack.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KnapsackProblem.cs",
+              "DocumentMoniker": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\KnapsackProblem.cs",
+              "RelativeDocumentMoniker": "KnapsackProblem.cs",
+              "ToolTip": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\KnapsackProblem.cs",
+              "RelativeToolTip": "KnapsackProblem.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T13:24:25.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\Item.cs",
+              "RelativeDocumentMoniker": "Item.cs",
+              "ToolTip": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\Item.cs",
+              "RelativeToolTip": "Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T13:22:05.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jakub\\Documents\\GitHub\\Net_Java\\Lab1_Knapsack\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T13:20:30.9Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
