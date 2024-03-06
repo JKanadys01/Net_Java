@@ -21,8 +21,11 @@
             Console.WriteLine("Items in the knapsack:");
             foreach (var item in solution) 
             {
-                Console.WriteLine($"Value: {item.value}, Weight: {item.weight}");
+                Console.WriteLine($"Nr: {item.nr} Value: {item.value}, Weight: {item.weight}");
             }
+            Console.WriteLine("Total results");
+            Result total_resuult = new Result(solution);
+            Console.WriteLine($"Total value: {total_resuult.total_value}. Total weight: {total_resuult.total_weight}");
         }
     }
 }
