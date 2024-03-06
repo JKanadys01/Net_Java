@@ -13,7 +13,7 @@ namespace Lab1_Knapsack
         public KnapsackProblem(int nr_of_items, int seed)
         {
             items = new List<Item>();
-            Random random = new Random();
+            Random random = new Random(seed);
             for (int i = 0; i < nr_of_items; i++)
             {
                 int Value = random.Next(1,11);
