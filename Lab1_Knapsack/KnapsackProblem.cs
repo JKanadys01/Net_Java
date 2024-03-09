@@ -8,7 +8,7 @@ namespace Lab1_Knapsack
 {
     internal class KnapsackProblem
     {
-        private List<Item> items;
+        public List<Item> items;
 
         public KnapsackProblem(int nr_of_items, int seed)
         {
@@ -27,25 +27,22 @@ namespace Lab1_Knapsack
             
             List <Item> result = new List<Item>();
             int currentWeight = 0;
-            int currentValue = 0;
-            Console.WriteLine("Sorted items:");
+            
             foreach (var item in items)
             {
-                Console.WriteLine($"Nr: {item.nr} Value: {item.value}, Weight: {item.weight}");
                 if (currentWeight + item.weight <= capacity) 
                 {
                     result.Add(item);
                     currentWeight += item.weight;
-                    currentValue += item.value;
+                    
                 }
             }
-            Console.WriteLine("\n");
             return result;
             
         } 
         public override string ToString()
         {
-            string result = "";
+            string result = "Sorted items\n";
             foreach (var item in items) 
             {
                 result += $"Nr: {item.nr} Value: {item.value}, Weight: {item.weight}\n";
