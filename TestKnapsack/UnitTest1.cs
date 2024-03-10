@@ -7,7 +7,7 @@ namespace TestKnapsack
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestCount()
         {
             List<int> sizes = new List<int>() { 10,20,30,40,50 };
             foreach (int n in sizes) 
@@ -27,8 +27,6 @@ namespace TestKnapsack
             KnapsackProblem problem = new KnapsackProblem(nr,seed);
             List<Item> result = problem.Solve(capacity);
             Assert.IsTrue(result.Count >= 1);
-
-            
         }
 
         [TestMethod]
@@ -70,8 +68,6 @@ namespace TestKnapsack
 
             Assert.AreEqual(total_result1.total_weight, total_result2.total_weight);
             Assert.AreEqual(total_result1.total_value, total_result2.total_value);
-
-
         }
 
         [TestMethod]
@@ -101,7 +97,6 @@ namespace TestKnapsack
             Result total_result = new Result(solution);
             Assert.AreEqual(total_result.total_weight, 18);
             Assert.AreEqual(total_result.total_value, 26);
-
         }
 
         [TestMethod]
@@ -109,7 +104,7 @@ namespace TestKnapsack
         {
             int nr = 5;
             int seed = 10;
-            int capacity = 20;
+            
 
             KnapsackProblem problem1 = new KnapsackProblem(nr, seed);
             KnapsackProblem problem2 = new KnapsackProblem(nr, seed);
@@ -125,7 +120,18 @@ namespace TestKnapsack
                 Assert.AreEqual(list1[i].weight, list2[i].weight);
                 Assert.AreEqual(list1[i].nr, list2[i].nr);
             }
+        }
 
+        [TestMethod]
+        public void NoCapacity()
+        {
+            int nr = 5;
+            int seed = 10;
+            int capacity = 0;
+
+            KnapsackProblem problem = new KnapsackProblem(nr, seed);
+            List<Item> result = problem.Solve(capacity);
+            Assert.AreEqual(0, result.Count);
         }
     }
 }
