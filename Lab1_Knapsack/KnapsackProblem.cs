@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: InternalsVisibleTo("TestKnapsack")]
+[assembly: InternalsVisibleTo("TestKnapsack"),InternalsVisibleTo("GUI_Knapsack")]
 namespace Lab1_Knapsack
 {
     internal class KnapsackProblem
@@ -44,7 +44,7 @@ namespace Lab1_Knapsack
         } 
         public override string ToString()
         {
-            string result = "Sorted items\n";
+            string result = "";
             foreach (var item in items) 
             {
                 result += $"Nr: {item.nr} Value: {item.value}, Weight: {item.weight}\n";

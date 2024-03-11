@@ -17,6 +17,7 @@ namespace Lab1_Knapsack
 
             KnapsackProblem problem = new KnapsackProblem(nr_of_items, seed);
 
+            Console.WriteLine("Sorted Items");
             List<Item> solution = problem.Solve(capacity);
             Console.WriteLine(problem.ToString());
 

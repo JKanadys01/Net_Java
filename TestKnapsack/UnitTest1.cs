@@ -133,5 +133,29 @@ namespace TestKnapsack
             List<Item> result = problem.Solve(capacity);
             Assert.AreEqual(0, result.Count);
         }
+
+        [TestMethod]
+        public void EmptyProblem()
+        {
+            int nr = 0;
+            int seed = 10;
+            int capsacity = 10;
+
+            KnapsackProblem problem = new KnapsackProblem(nr,seed);
+            List<Item> solution = problem.Solve(capsacity);
+            Assert.AreEqual(0, solution.Count);
+        }
+
+        [TestMethod]
+        public void NegativeCapacity()
+        {
+            int nr = 5;
+            int seed = 10;
+            int capsacity = -20;
+
+            KnapsackProblem problem = new KnapsackProblem(nr, seed);
+            List<Item> solution = problem.Solve(capsacity);
+            Assert.AreEqual(0, solution.Count);
+        }
     }
 }
