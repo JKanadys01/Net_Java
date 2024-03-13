@@ -97,6 +97,7 @@
             seed.Name = "seed";
             seed.Size = new Size(100, 23);
             seed.TabIndex = 8;
+            seed.TextChanged += seed_TextChanged;
             // 
             // capacity
             // 

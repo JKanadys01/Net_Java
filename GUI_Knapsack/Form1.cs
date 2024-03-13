@@ -42,14 +42,9 @@ namespace GUI_Knapsack
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void nr_of_items_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(nr_of_items.Text, out int value) && value < 0)
+            if (!string.IsNullOrEmpty(nr_of_items.Text) && !int.TryParse(nr_of_items.Text, out _))
             {
                 nr_of_items.BackColor = Color.Red;
             }
@@ -61,13 +56,25 @@ namespace GUI_Knapsack
 
         private void capacity_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(capacity.Text, out int value) && value < 0)
+            if (!string.IsNullOrEmpty(capacity.Text) && !int.TryParse(capacity.Text, out _))
             {
                 capacity.BackColor = Color.Red;
             }
             else
             {
                 capacity.BackColor = SystemColors.Window;
+            }
+        }
+
+        private void seed_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(seed.Text) && !int.TryParse(seed.Text, out _))
+            {
+                seed.BackColor = Color.Red;
+            }
+            else
+            {
+                seed.BackColor = SystemColors.Window;
             }
         }
     }
