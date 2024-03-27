@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Data_box = new ListBox();
             get_location = new Button();
             wroclaw_location = new Button();
@@ -49,13 +50,15 @@
             wykres_button = new Button();
             delete_by_city_button = new Button();
             map_button = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Data_box
             // 
             Data_box.FormattingEnabled = true;
             Data_box.ItemHeight = 15;
-            Data_box.Location = new Point(266, 12);
+            Data_box.Location = new Point(255, 12);
             Data_box.Name = "Data_box";
             Data_box.Size = new Size(260, 439);
             Data_box.TabIndex = 1;
@@ -245,12 +248,22 @@
             map_button.UseVisualStyleBackColor = true;
             map_button.Click += map_button_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(590, 196);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(216, 255);
+            pictureBox1.TabIndex = 22;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(map_button);
             Controls.Add(delete_by_city_button);
             Controls.Add(wykres_button);
@@ -274,6 +287,7 @@
             Controls.Add(Data_box);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,5 +314,6 @@
         private Button wykres_button;
         private Button delete_by_city_button;
         private Button map_button;
+        private PictureBox pictureBox1;
     }
 }
