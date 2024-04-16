@@ -54,12 +54,12 @@ namespace Lab3_Threads
             multiplier.MultiplyMatricesThreads(numThreads);
             threadsTime = multiplier.elapsedTime;
             threadsResult = multiplier;
-            generated_textBox.Text += $"Threads (Used {multiplier.UsedThreads} threads):"; // Dodanie wyœwietlania liczby u¿ytych w¹tków
+            
             multiplier.MultiplyMatricesParallel(numThreads);
             parallelTime = multiplier.elapsedTime;
             parallelResult = multiplier;
             
-            generated_textBox.Text += $"Parallel (Used {multiplier.UsedThreads} threads):"; // Dodanie wyœwietlania liczby u¿ytych w¹tków
+            
             seq_textBox.Text = $"{sequentialTime} ms\r\n";
             thread_textBox.Text += $"{threadsTime} ms\r\n";
             parallel_textBox.Text += $"{parallelTime} ms\r\n";
