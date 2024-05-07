@@ -33,7 +33,12 @@
                 <label for="rate" class="form-label">Rate:</label> 
                 <InputNumber id="rate" @bind-Value="Movie.Rate" class="form-control" /> 
                 <ValidationMessage For="() => Movie.Rate" class="text-danger" /> 
-            </div>        
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image URL:</label>
+                <InputText id="imageUrl" @bind-Value="Movie.ImageUrl" class="form-control" />
+                <ValidationMessage For="() => Movie.ImageUrl" class="text-danger" />
+            </div>
             <button type="submit" class="btn btn-primary">Create</button>
         </EditForm>
     </div>
@@ -51,6 +56,10 @@
     // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
     public async Task AddMovie()
     {
+        if (string.IsNullOrWhiteSpace(Movie.ImageUrl))
+        {
+            Movie.ImageUrl = ""; // Ustaw puste URL, jeśli nie został wpisany żaden adres
+        }
         DB.Movie.Add(Movie);
         await DB.SaveChangesAsync();
         NavigationManager.NavigateTo("/movies");

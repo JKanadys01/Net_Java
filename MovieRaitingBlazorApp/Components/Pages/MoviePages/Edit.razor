@@ -42,6 +42,11 @@ else
                     <InputNumber id="rate" @bind-Value="Movie.Rate" class="form-control" />
                     <ValidationMessage For="() => Movie.Rate" class="text-danger" />
                 </div>
+                <div class="mb-3">
+                    <label for="imageUrl" class="form-label">Image URL:</label>
+                    <InputText id="imageUrl" @bind-Value="Movie.ImageUrl" class="form-control" />
+                    <ValidationMessage For="() => Movie.ImageUrl" class="text-danger" />
+                </div>
                 <button type="submit" class="btn btn-primary">Save</button>
             </EditForm>
         </div>

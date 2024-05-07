@@ -27,6 +27,17 @@
             <dd class="col-sm-10">@movie.ReliseDate</dd>
             <dt class="col-sm-2">Rate</dt>
             <dd class="col-sm-10">@movie.Rate</dd>
+            <dt class="col-sm-2">Image</dt>
+            <dd class="col-sm-10">
+                @if (!string.IsNullOrEmpty(movie.ImageUrl))
+                {
+                    <img src="@movie.ImageUrl" alt="Movie Image" style="max-width: 100%;" />
+                }
+                else
+                {
+                    <p>No image available</p>
+                }
+            </dd>
         </dl>
         <div>
             <a href="@($"/movies/edit?id={movie.Id}")">Edit</a> |
