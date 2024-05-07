@@ -40,8 +40,12 @@
             </dd>
         </dl>
         <div>
-            <a href="@($"/movies/edit?id={movie.Id}")">Edit</a> |
-            <a href="@($"/movies")">Back to List</a>
+            <a href="@($"/movies/edit?id={movie.Id}")">
+                <span class="bi bi-pencil" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Edit
+            </a> |
+            <a href="@($"/movies")">
+                <span class="bi bi-list-ul" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Back to List
+            </a>
         </div>
         <div>
             <h4>Add Rating</h4>

@@ -35,7 +35,9 @@
         </dl>
         <EditForm method="post" Model="movie" OnValidSubmit="DeleteMovie" FormName="delete" Enhance>
             <button type="submit" class="btn btn-danger" disabled="@(movie is null)">Delete</button> |
-            <a href="/movies">Back to List</a>
+            <a href="/movies">
+                <span class="bi bi-list-ul" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Back to List
+            </a>
         </EditForm>
     }
 </div>

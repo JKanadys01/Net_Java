@@ -11,7 +11,9 @@
 <h1>Index</h1>
 
 <p>
-    <a href="movies/create">Create New</a>
+    <a href="movies/create">
+        <span class="bi bi-plus-square" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Create New
+    </a>
 </p>
 
 <QuickGrid Class="table" Items="DB.Movie" Sortable="true">
@@ -20,9 +22,15 @@
     <PropertyColumn Property="movie => movie.Rate" Sortable="true" />
 
     <TemplateColumn Context="movie">
-        <a href="@($"movies/edit?id={movie.Id}")">Edit</a> |
-        <a href="@($"movies/details?id={movie.Id}")">Details</a> |
-        <a href="@($"movies/delete?id={movie.Id}")">Delete</a>
+        <a href="@($"movies/edit?id={movie.Id}")">
+            <span class="bi bi-pencil" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Edit
+        </a> |
+        <a href="@($"movies/details?id={movie.Id}")">
+            <span class="bi bi-search" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Details
+        </a> |
+        <a href="@($"movies/delete?id={movie.Id}")">
+            <span class="bi bi-trash" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Delete
+        </a>
     </TemplateColumn>
 </QuickGrid>
 
