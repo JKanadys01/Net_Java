@@ -5,7 +5,9 @@
 @using Microsoft.EntityFrameworkCore
 @attribute [StreamRendering]
 @rendermode InteractiveServer
+@using Microsoft.AspNetCore.Authorization
 
+@attribute [Authorize]
 <PageTitle>Details</PageTitle>
 
 <h1>Details</h1>
@@ -40,12 +42,10 @@
             </dd>
         </dl>
         <div>
-            <a href="@($"/movies/edit?id={movie.Id}")">
-                <span class="bi bi-pencil" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Edit
-            </a> |
-            <a href="@($"/movies")">
-                <span class="bi bi-list-ul" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Back to List
-            </a>
+
+            <button @onclick="NavigateToEdit" class="btn btn-primary"><span class="bi bi-pencil" aria-hidden="true"></span>Edit</button>
+            <button @onclick="NavigateToList" class="btn btn-primary"><span class="bi bi-list" aria-hidden="true"></span>Back to List</button>
+            
         </div>
         <div>
             <h4>Add Rating</h4>
@@ -94,5 +94,15 @@
         {
             errorMessage = "Rating must be between 1 and 10.";
         }
+    }
+
+    private void NavigateToList()
+    {
+        NavigationManager.NavigateTo("/movies");
+    }
+
+    private void NavigateToEdit()
+    {
+        NavigationManager.NavigateTo($"/movies/edit?id={Id}");
     }
 }

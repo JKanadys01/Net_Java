@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Ten plik jest wykorzystywany przez proces publikowania/pakowania projektu internetowego. Możesz dostosować zachowanie tego procesu
+ poprzez edycję tego pliku MSBuild. Aby dowiedzieć się więcej o tym działaniu, odwiedź stronę https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK9IwRK8a2kmtC8ZkGVjVwwAAAAACAAAAAAAQZgAAAAEAACAAAAAUjG11lDufvyUj9Y+01Ul1+A/5NEakM4G55VqG9ULXwgAAAAAOgAAAAAIAACAAAADtCCF4BWv56RvYuvxBJ6+HyahxZwvgUOnTbvJHDzwwc4AAAACRW6i3ISrlRDfIfbWVKzmWXu5GkVGmeD3+87ytC2HThyu8lMh9mSfDUKqwT9lF9q+lsUtsTBWf3WZZ2AmMnFIXrKowxKmZIcAC8MW+gy9MdAAL/aH/6ymUBmYM/O9J0rAeTS4FNRucy9yX7WnxrVyQ8NXxZxh5nvXfZUbmrUUNY0AAAAAklxOif/J/q1vHvhHTPf0KHunI1LQUSLoywYMk4hloGAe/6L9XQnZ5FWMPFfm8CC5VwUiWtPsMN7eo89JRc35i</EncryptedPassword>
+    <History>True|2024-05-07T22:35:39.7165179Z;True|2024-05-07T23:34:17.7503559+02:00;True|2024-05-07T22:58:13.5977555+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=movieraitingblazorappdbserver.database.windows.net,1433%3bInitial Catalog=MovieRaitingBlazorApp_db%3bUser ID=jakubmaster%3bPassword=Jagoda123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MovieRaitingBlazorApp.Data.ApplicationDbContext">
+      <Value>Data Source=movieraitingblazorappdbserver.database.windows.net,1433%3bInitial Catalog=MovieRaitingBlazorApp_db%3bUser ID=jakubmaster%3bPassword=Jagoda123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

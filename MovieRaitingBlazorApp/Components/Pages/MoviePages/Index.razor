@@ -5,14 +5,16 @@
 @using Microsoft.EntityFrameworkCore
 @attribute [StreamRendering]
 @rendermode InteractiveServer
-
+@using Microsoft.AspNetCore.Authorization
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
 <PageTitle>Index</PageTitle>
 
 <h1>Index</h1>
 
 <p>
     <a href="movies/create">
-        <span class="bi bi-plus-square" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Create New
+        <button @onclick="NavigateToCreate" class="btn btn-primary"><span class="bi bi-plus-square" aria-hidden="true"></span>Create New</button>
     </a>
 </p>
 
@@ -22,15 +24,31 @@
     <PropertyColumn Property="movie => movie.Rate" Sortable="true" />
 
     <TemplateColumn Context="movie">
-        <a href="@($"movies/edit?id={movie.Id}")">
-            <span class="bi bi-pencil" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Edit
-        </a> |
-        <a href="@($"movies/details?id={movie.Id}")">
-            <span class="bi bi-search" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Details
-        </a> |
-        <a href="@($"movies/delete?id={movie.Id}")">
-            <span class="bi bi-trash" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Delete
-        </a>
+        <button @onclick="@( () => NavigateToEdit(movie.Id) )" class="btn btn-primary"><span class="bi bi-pencil" aria-hidden="true"></span>Edit</button>
+        <button @onclick="@( () => NavigateToDetails(movie.Id) )" class="btn btn-primary"><span class="bi bi-search" aria-hidden="true"></span>Details</button>
+        <button @onclick="@( () => NavigateToDelete(movie.Id) )" class="btn btn-primary"><span class="bi bi-trash" aria-hidden="true"></span>Delete</button>
+
     </TemplateColumn>
 </QuickGrid>
 
+@code
+{
+    private void NavigateToDetails(int id)
+    {
+        NavigationManager.NavigateTo($"/movies/details?id={id}");
+    }
+
+    private void NavigateToEdit(int id)
+    {
+        NavigationManager.NavigateTo($"/movies/edit?id={id}");
+    }
+
+    private void NavigateToDelete(int id)
+    {
+        NavigationManager.NavigateTo($"/movies/delete?id={id}");
+    }
+    private void NavigateToCreate()
+    {
+        NavigationManager.NavigateTo("/movies/create");
+    }
+}

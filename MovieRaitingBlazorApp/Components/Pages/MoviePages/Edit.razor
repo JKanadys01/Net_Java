@@ -3,7 +3,9 @@
 @using MovieRaitingBlazorApp.Components
 @inject NavigationManager NavigationManager
 @using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Authorization
 
+@attribute [Authorize]
 <PageTitle>Edit</PageTitle>
 
 <h1>Edit</h1>
@@ -53,9 +55,9 @@ else
     </div>
 }
 
-<div>
+<div class="my-3">
     <a href="/movies">
-        <span class="bi bi-list-ul" style="font-size: 24px; margin-bottom: 5px" aria-hidden="true"></span>Back to List
+        <button @onclick="NavigateToList" class="btn btn-primary"><span class="bi bi-list" aria-hidden="true"></span>Back to List</button>
     </a>
 </div>
 
@@ -104,5 +106,10 @@ else
     bool MovieExists(int id)
     {
         return DB.Movie.Any(e => e.Id == id);
+    }
+
+    private void NavigateToList()
+    {
+        NavigationManager.NavigateTo("/movies");
     }
 }

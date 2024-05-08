@@ -3,7 +3,9 @@
 @using MovieRaitingBlazorApp.Components
 @inject NavigationManager NavigationManager
 @using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Authorization
 
+@attribute [Authorize]
 <PageTitle>Delete</PageTitle>
 
 <h1>Delete</h1>
@@ -35,9 +37,9 @@
         </dl>
         <EditForm method="post" Model="movie" OnValidSubmit="DeleteMovie" FormName="delete" Enhance>
             <button type="submit" class="btn btn-danger" disabled="@(movie is null)">Delete</button> |
-            <a href="/movies">
-                <span class="bi bi-list-ul" style="font-size: 24px; margin-bottom: 25px" aria-hidden="true"></span>Back to List
-            </a>
+
+            <button @onclick="NavigateToList" class="btn btn-primary"><span class="bi bi-list" aria-hidden="true"></span>Back to List</button>
+            
         </EditForm>
     }
 </div>
@@ -62,6 +64,11 @@
     {
         DB.Movie.Remove(movie!);
         await DB.SaveChangesAsync();
+        NavigationManager.NavigateTo("/movies");
+    }
+
+    private void NavigateToList()
+    {
         NavigationManager.NavigateTo("/movies");
     }
 }

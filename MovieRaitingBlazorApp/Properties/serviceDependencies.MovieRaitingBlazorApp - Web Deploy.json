@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql3": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/MovieRaitingBlazorApp/providers/Microsoft.ServiceLinker/linkers/ConnectionString_2DEC3189D9",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/movieraitingblazorappdbserver/databases/MovieRaitingBlazorApp_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionString"
+    }
+  }
+}
