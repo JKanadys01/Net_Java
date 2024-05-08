@@ -50,16 +50,13 @@ else
                     <ValidationMessage For="() => Movie.ImageUrl" class="text-danger" />
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
+                
             </EditForm>
         </div>
     </div>
 }
 
-<div class="my-3">
-    <a href="/movies">
-        <button @onclick="NavigateToList" class="btn btn-primary"><span class="bi bi-list" aria-hidden="true"></span>Back to List</button>
-    </a>
-</div>
+
 
 @code {
     [SupplyParameterFromQuery]
@@ -100,7 +97,7 @@ else
             }
         }
 
-        NavigationManager.NavigateTo("/movies");
+        NavigationManager.NavigateTo($"/movies/details?id={Id}");
     }
 
     bool MovieExists(int id)
@@ -108,8 +105,8 @@ else
         return DB.Movie.Any(e => e.Id == id);
     }
 
-    private void NavigateToList()
-    {
-        NavigationManager.NavigateTo("/movies");
-    }
+    
+
+    
+
 }
