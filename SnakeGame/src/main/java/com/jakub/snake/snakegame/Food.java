@@ -11,8 +11,12 @@ public class Food {
         position = generateNewPositon();
     }
 
-    public void move() {
-        position = generateNewPositon();
+    public void move(Snake snake) {
+        boolean valid = false;
+        while (!valid) {
+            position = generateNewPositon();
+            valid = !snake.getBody().contains(position);
+        }
     }
 
     private Point generateNewPositon() {

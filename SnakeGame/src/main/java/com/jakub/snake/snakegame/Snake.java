@@ -62,10 +62,9 @@ public class Snake {
         direction = newDirection;
     }
 
-    // Metoda sprawdzająca, czy punkt znajduje się na ciele węża
-    public boolean contains(Point point) {
-        for (Point bodyPart : body) {
-            if (bodyPart.equals(point)) {
+    public boolean isSnakePosition(Point position) {
+        for (Point point : body) {
+            if (point.equals(position)) {
                 return true;
             }
         }

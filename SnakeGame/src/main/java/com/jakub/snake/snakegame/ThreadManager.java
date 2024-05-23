@@ -19,8 +19,8 @@ public class ThreadManager {
     }
 
     private void moveFood() {
-        while (true) {
-            game.getFood().move();
+        while (game.isrunnning()) {
+            game.getFood().move(game.getSnake());
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {

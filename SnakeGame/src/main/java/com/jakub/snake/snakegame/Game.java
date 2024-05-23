@@ -15,10 +15,6 @@ public class Game {
         justAteFood = false;
     }
 
-    public void start() {
-        GameLogger.log("Game start");
-    }
-
     public void update() {
         if (gamerunning) {
             snake.move();
@@ -30,13 +26,12 @@ public class Game {
         if (snake.getHead().equals(food.getPosition())) {
             score++;
             snake.grow();
-            food.move();
-            GameLogger.log("Food eaten, score: " + score);
+            food.move(snake);
+            //GameLogger.log("Food eaten, score: " + score);
             justAteFood = true;
         }
         if(!justAteFood && snake.collidesWithItself()) {
             gamerunning = false;
-            GameLogger.log("Game Over! Snake collided with itself.");
         }
         justAteFood = false;
     }
