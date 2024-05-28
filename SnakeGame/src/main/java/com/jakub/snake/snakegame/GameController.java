@@ -112,6 +112,12 @@ public class GameController {
         Point foodPos = game.getFood().getPosition();
         gc.fillOval(foodPos.getX() * 20, foodPos.getY() * 20, 20, 20);
 
+        // Rysowanie przeszkod
+        for (Obstacle obstacle : game.getObstacles()) {
+            Point pos = obstacle.getLocation();
+            gc.fillRect(pos.getX() * 20, pos.getY() * 20, 20, 20);
+        }
+
         //Rysowanie score
         gc.fillText("Score: " + game.getScore(), canvas.getWidth() - 70, 20);
 
