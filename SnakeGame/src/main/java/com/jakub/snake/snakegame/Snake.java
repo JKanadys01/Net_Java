@@ -8,8 +8,11 @@ import java.util.LinkedList;
 public class Snake {
     private LinkedList<Point> body;
     private TextInputControlSkin.Direction direction;
-
-    public Snake() {
+    private int boardWidth;
+    private int boardHeight;
+    public Snake(int boardWidth, int boardHeight) {
+        this.boardWidth = boardWidth;
+        this.boardHeight = boardHeight;
         body = new LinkedList<>();
         direction = TextInputControlSkin.Direction.RIGHT;
         body.add(new Point(10, 10));  // Głowa węża
@@ -18,15 +21,15 @@ public class Snake {
     public void move() {
         Point newHead = getNextPosition();
         // Zapewnienie by snake nie wyszedl poza plansze
-        if (newHead.getX() >= 20) {
+        if (newHead.getX() >= boardWidth / 20) {
             newHead.setLocation(0, newHead.getY());
         } else if (newHead.getX() < 0) {
-            newHead.setLocation(19, newHead.getY());
+            newHead.setLocation((boardWidth / 20) - 1, newHead.getY());
         }
-        if (newHead.getY() >= 20) {
+        if (newHead.getY() >= boardHeight / 20) {
             newHead.setLocation(newHead.getX(), 0);
         } else if (newHead.getY() < 0) {
-            newHead.setLocation(newHead.getX(), 19);
+            newHead.setLocation(newHead.getX(), (boardHeight / 20) - 1);
         }
         body.addFirst(newHead);
         body.removeLast();

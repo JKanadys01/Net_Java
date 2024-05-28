@@ -20,13 +20,18 @@ public class GameController {
     private Game game;
     private Canvas canvas;
     private ThreadManager threadManager;
-    public void start(Stage stage) {
-        game = new Game();
-        canvas = new Canvas(400,400);
+
+    public void start(Stage stage, String size, boolean movingFood, boolean movingObsacles, int numberOfObsacles) {
+        String[] dimensions = size.split("x");
+        int width = Integer.parseInt(dimensions[0]);
+        int height = Integer.parseInt(dimensions[1]);
+
+        game = new Game(width, height, movingFood, movingObsacles, numberOfObsacles);
+        canvas = new Canvas(width,height);
         threadManager = new ThreadManager(game);
         StackPane root = new StackPane();
         root.getChildren().add(canvas);
-        Scene scene = new Scene(root, 400, 400);
+        Scene scene = new Scene(root, width, height);
 
         scene.setOnKeyPressed(this::handleKeyPress);
         stage.setTitle("Snake");
@@ -55,7 +60,7 @@ public class GameController {
 
     private void handleKeyPress(KeyEvent event) {
         if (!game.isrunnning() && event.getCode() == KeyCode.ENTER) {
-            game = new Game();
+            game = new Game(game.getWidth(), game.getHeight(), game.ismovingFood(), game.ismovingObstacle(), game.getNumberOfObstacles());
             threadManager.stop();
             threadManager = new ThreadManager(game);
             threadManager.start();

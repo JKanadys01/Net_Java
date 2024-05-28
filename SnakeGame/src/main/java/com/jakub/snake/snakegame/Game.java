@@ -9,16 +9,27 @@ public class Game {
     private List<Obstacle> obstacles;
     private boolean justAteFood;
     int score;
+    private int width;
+    private int height;
+    private int numberOfObstacles;
+    private boolean movingFood;
+    private boolean movingObstacle;
 
     private boolean gamerunning;
-    public Game() {
-        snake = new Snake();
+    public Game(int width, int height, boolean movingFood, boolean movingObstacle, int numberOfObstacles) {
+        this.width = width;
+        this.height = height;
+        this.movingFood = movingFood;
+        this.movingObstacle = movingObstacle;
+        this.numberOfObstacles = numberOfObstacles;
+        snake = new Snake(width, height);
         food = new Food();
         obstacles = new ArrayList<>();
         gamerunning = true;
         score = 0;
         justAteFood = false;
-        for (int i = 0; i < 5; i++) {
+
+        for (int i = 0; i < numberOfObstacles; i++) {
             obstacles.add(new Obstacle());
         }
     }
@@ -68,5 +79,25 @@ public class Game {
 
     public int getScore() {
         return score;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public boolean ismovingFood() {
+        return movingFood;
+    }
+
+    public boolean ismovingObstacle() {
+        return movingObstacle;
+    }
+
+    public int getNumberOfObstacles() {
+        return numberOfObstacles;
     }
 }
