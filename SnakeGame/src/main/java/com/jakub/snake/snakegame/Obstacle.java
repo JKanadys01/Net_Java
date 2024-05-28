@@ -6,8 +6,12 @@ import java.util.Random;
 public class Obstacle {
     private Point location;
     private Random rand;
+    private int borderWidth;
+    private int borderHight;
 
-    public Obstacle() {
+    public Obstacle(int borderWidth, int borderHight) {
+        this.borderWidth = borderWidth;
+        this.borderHight = borderHight;
         rand = new Random();
         location = generateNewLocation();
     }
@@ -17,7 +21,7 @@ public class Obstacle {
     }
 
     private  Point generateNewLocation() {
-        return new Point(rand.nextInt(20), rand.nextInt(20));
+        return new Point(rand.nextInt(borderWidth/20), rand.nextInt(borderWidth/20));
     }
 
     public Point getLocation() {

@@ -12,8 +12,12 @@ public class ThreadManager {
     }
 
     public void start() {
-        foodThread.start();
-        obstacleThread.start();
+        if(game.ismovingFood()) {
+            foodThread.start();
+        }
+        if(game.ismovingObstacle()) {
+            obstacleThread.start();
+        }
     }
 
     public void stop() {

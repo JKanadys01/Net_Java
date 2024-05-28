@@ -23,14 +23,14 @@ public class Game {
         this.movingObstacle = movingObstacle;
         this.numberOfObstacles = numberOfObstacles;
         snake = new Snake(width, height);
-        food = new Food();
+        food = new Food(width,height);
         obstacles = new ArrayList<>();
         gamerunning = true;
         score = 0;
         justAteFood = false;
 
         for (int i = 0; i < numberOfObstacles; i++) {
-            obstacles.add(new Obstacle());
+            obstacles.add(new Obstacle(width,height));
         }
     }
 
@@ -46,7 +46,6 @@ public class Game {
             score++;
             snake.grow();
             food.move(snake);
-            //GameLogger.log("Food eaten, score: " + score);
             justAteFood = true;
         }
 

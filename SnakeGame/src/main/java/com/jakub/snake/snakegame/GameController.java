@@ -110,15 +110,18 @@ public class GameController {
 
         // Rysowanie węża
         for (Point point : game.getSnake().getBody()) {
+            gc.setFill(Color.GREEN);
             gc.fillRect(point.getX() * 20, point.getY() * 20, 20, 20);
         }
 
         // Rysowanie jedzenia
         Point foodPos = game.getFood().getPosition();
+        gc.setFill(Color.RED);
         gc.fillOval(foodPos.getX() * 20, foodPos.getY() * 20, 20, 20);
 
         // Rysowanie przeszkod
         for (Obstacle obstacle : game.getObstacles()) {
+            gc.setFill(Color.BLACK);
             Point pos = obstacle.getLocation();
             gc.fillRect(pos.getX() * 20, pos.getY() * 20, 20, 20);
         }
