@@ -20,8 +20,14 @@ public class GameController {
     private Game game;
     private Canvas canvas;
     private ThreadManager threadManager;
+    private Stage primaryStage;
+    private main_Snake mainApp;
 
+    public GameController(main_Snake mainApp) {
+        this.mainApp = mainApp;
+    }
     public void start(Stage stage, String size, boolean movingFood, boolean movingObsacles, int numberOfObsacles) {
+        this.primaryStage = stage;
         String[] dimensions = size.split("x");
         int width = Integer.parseInt(dimensions[0]);
         int height = Integer.parseInt(dimensions[1]);
@@ -64,6 +70,9 @@ public class GameController {
             threadManager.stop();
             threadManager = new ThreadManager(game);
             threadManager.start();
+        } else if (!game.isrunnning() && event.getCode() == KeyCode.ESCAPE) {
+            threadManager.stop();
+            mainApp.start(primaryStage);
         } else {
             // Aktualny kierunek węża
             TextInputControlSkin.Direction currentDirection = game.getSnake().getDirection();

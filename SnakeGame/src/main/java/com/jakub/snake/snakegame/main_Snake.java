@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class main_Snake extends Application {
     @Override
     public void start(Stage primaryStage) {
-        GameController gameController = new GameController();
+        GameController gameController = new GameController(this);
 
         // Menu początkowe
         VBox menu = new VBox();
