@@ -127,6 +127,7 @@ public class GameController {
         }
 
         //Rysowanie score
+        gc.setFill(Color.BLACK);
         gc.fillText("Score: " + game.getScore(), canvas.getWidth() - 70, 20);
 
         if (!game.isrunnning()) {

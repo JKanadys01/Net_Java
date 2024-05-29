@@ -8,6 +8,9 @@ public class Obstacle {
     private Random rand;
     private int borderWidth;
     private int borderHight;
+    boolean colidesWithSnake;
+    boolean colidesWithFood;
+    boolean valid;
 
     public Obstacle(int borderWidth, int borderHight) {
         this.borderWidth = borderWidth;
@@ -16,12 +19,19 @@ public class Obstacle {
         location = generateNewLocation();
     }
 
-    public void move() {
-        location = generateNewLocation();
+    public void move(Snake snake, Food food) {
+        valid = false;
+        while (!valid) {
+            location = generateNewLocation();
+            colidesWithFood = snake.getBody().contains(location);
+            colidesWithSnake = food.getPosition().equals(location);
+            valid = !colidesWithFood && !colidesWithSnake;
+
+        }
     }
 
     private  Point generateNewLocation() {
-        return new Point(rand.nextInt(borderWidth/20), rand.nextInt(borderWidth/20));
+        return new Point(rand.nextInt(borderWidth/20), rand.nextInt(borderHight/20));
     }
 
     public Point getLocation() {

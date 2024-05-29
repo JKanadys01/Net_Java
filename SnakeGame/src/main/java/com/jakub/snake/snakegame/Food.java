@@ -1,6 +1,7 @@
 package com.jakub.snake.snakegame;
 
 import java.awt.*;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class Food {
@@ -8,21 +9,28 @@ public class Food {
     private Random random;
     private int borderWidth;
     private int borderHight;
-
-
+    boolean colidesWithSnake;
+    boolean colidesWithObstacle;
+    boolean valid;
     public Food(int borderWidth, int borderHight) {
         this.borderWidth = borderWidth;
         this.borderHight = borderHight;
         random = new Random();
-        position = generateNewPositon();
-
     }
 
-    public void move(Snake snake) {
-        boolean valid = false;
+    public void move(Snake snake, LinkedList<Obstacle> obstacles) {
+        valid = false;
         while (!valid) {
             position = generateNewPositon();
-            valid = !snake.getBody().contains(position);
+            colidesWithSnake = snake.getBody().contains(position);
+            colidesWithObstacle = false;
+            for (Obstacle obstacle : obstacles ) {
+                if (obstacle.getLocation().equals(position)) {
+                    colidesWithObstacle = true;
+                    break;
+                }
+            }
+            valid = !colidesWithSnake && !colidesWithObstacle;
         }
     }
 

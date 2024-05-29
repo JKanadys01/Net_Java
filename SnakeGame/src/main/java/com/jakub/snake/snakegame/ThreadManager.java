@@ -26,7 +26,7 @@ public class ThreadManager {
 
     private void moveFood() {
         while (game.isrunnning()) {
-            game.getFood().move(game.getSnake());
+            game.getFood().move(game.getSnake(),game.getObstacles());
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -38,7 +38,7 @@ public class ThreadManager {
     private void moveObstacle() {
         while (game.isrunnning()) {
             for (Obstacle obstacle : game.getObstacles()) {
-                obstacle.move();
+                obstacle.move(game.getSnake(),game.getFood());
             }
             try {
                 Thread.sleep(7000);

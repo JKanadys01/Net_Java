@@ -1,12 +1,13 @@
 package com.jakub.snake.snakegame;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Game {
     private Snake snake;
+    private LinkedList<Obstacle> obstacles;
     private Food food;
-    private List<Obstacle> obstacles;
     private boolean justAteFood;
     int score;
     private int width;
@@ -14,8 +15,8 @@ public class Game {
     private int numberOfObstacles;
     private boolean movingFood;
     private boolean movingObstacle;
-
     private boolean gamerunning;
+
     public Game(int width, int height, boolean movingFood, boolean movingObstacle, int numberOfObstacles) {
         this.width = width;
         this.height = height;
@@ -23,15 +24,16 @@ public class Game {
         this.movingObstacle = movingObstacle;
         this.numberOfObstacles = numberOfObstacles;
         snake = new Snake(width, height);
-        food = new Food(width,height);
-        obstacles = new ArrayList<>();
-        gamerunning = true;
-        score = 0;
-        justAteFood = false;
-
+        obstacles = new LinkedList<>();
         for (int i = 0; i < numberOfObstacles; i++) {
             obstacles.add(new Obstacle(width,height));
         }
+        gamerunning = true;
+        score = 0;
+        justAteFood = false;
+        food = new Food(width,height);
+        food.move(snake, obstacles);
+
     }
 
     public void update() {
@@ -45,7 +47,7 @@ public class Game {
         if (snake.getHead().equals(food.getPosition())) {
             score++;
             snake.grow();
-            food.move(snake);
+            food.move(snake,obstacles);
             justAteFood = true;
         }
 
@@ -68,7 +70,7 @@ public class Game {
         return food;
     }
 
-    public List<Obstacle> getObstacles() {
+    public LinkedList<Obstacle> getObstacles() {
         return obstacles;
     }
 

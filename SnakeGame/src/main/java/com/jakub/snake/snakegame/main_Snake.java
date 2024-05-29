@@ -39,9 +39,9 @@ public class main_Snake extends Application {
             if (size.equals("400x400")) {
                 numberOfObstacles = 5;
             }else if (size.equals("600x600")) {
-                numberOfObstacles = 10;
+                numberOfObstacles = 20;
             }else if (size.equals("800x800")) {
-                numberOfObstacles = 30;
+                numberOfObstacles = 100;
             }
             gameController.start(primaryStage, size, movingFood, movingObstacles, numberOfObstacles);
         });
