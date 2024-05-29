@@ -17,6 +17,7 @@ public class main_Snake extends Application {
         // Menu początkowe
         VBox menu = new VBox();
         menu.setAlignment(Pos.CENTER);
+        menu.setSpacing(10);
 
         // ComboBox do wyboru rozmiaru planszy
         ComboBox<String> sizeComboBox = new ComboBox<>();

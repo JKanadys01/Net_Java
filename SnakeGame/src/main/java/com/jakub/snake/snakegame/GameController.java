@@ -136,8 +136,10 @@ public class GameController {
             gc.setTextAlign(TextAlignment.CENTER);
             gc.fillText("GAME OVER", canvas.getWidth() / 2, canvas.getHeight() / 2);
             gc.setFill(Color.BLACK);
+            gc.fillText("Your score: " + game.getScore(), canvas.getWidth() / 2, canvas.getHeight() / 2 + 40);
             gc.setFont(new Font("Arial", 12));
-            gc.fillText("Press ENTER to restart", canvas.getWidth() / 2, canvas.getHeight() / 2 + 30);
+            gc.fillText("Press ENTER to restart", canvas.getWidth() / 2, canvas.getHeight() / 2 + 70);
+            gc.fillText("Press ESC to return to menu", canvas.getWidth() / 2, canvas.getHeight() / 2 + 90);
         }
     }
 
