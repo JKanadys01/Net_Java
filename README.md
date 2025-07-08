@@ -38,8 +38,7 @@ This repository contains a collection of programming labs, exercises, and small-
 ## 🚀 Getting Started
 
 1. Clone the repository:
-2. Open the desired project folder in Visual Studio or the appropriate IDE (e.g. IntelliJ, Visual Studio Code).
-3. Follow the specific README (if available) inside each project folder.
+2. Open the desired project folder in Visual Studio or IntelliJ IDEA.
 
 ## 📌 Notes
 
