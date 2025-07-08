@@ -37,7 +37,7 @@ This repository contains a collection of programming labs, exercises, and small-
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
+1. Clone the repository
 2. Open the desired project folder in Visual Studio or IntelliJ IDEA.
 
 ## 📌 Notes
